@@ -270,7 +270,7 @@ function renderJobs() {
         gameData.rebirthOneCount > 0 ? maxLevel.classList.remove("hidden") : maxLevel.classList.add("hidden")
 
         const progressBar = task.querySelector(".progressBar", row)
-        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + task.name
+        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + keywords[task.name]
         const progressFill = task.querySelector(".progressFill", row)
         renderProgressBar(task, progressFill, progressBar)
 
@@ -309,7 +309,7 @@ function renderSkills() {
         gameData.rebirthOneCount > 0 ? maxLevel.classList.remove("hidden") : maxLevel.classList.add("hidden")
 
         const progressBar = task.querySelector(".progressBar", row)
-        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + task.name
+        progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + keywords[task.name]
         const progressFill = task.querySelector(".progressFill", row)
         renderProgressBar(task, progressFill, progressBar)
 
@@ -354,11 +354,11 @@ function renderRebirth() {
     const age2req = getEvilRequirement()
     let age2 = ""
     if (age2req == 200)
-        age2 = "2 whole centuries"
+        age2 = "二百年"
     else if (age2req == 100)
-        age2 = "1 century"
+        age2 = "一百年"
     else
-        age2 = age2req + " years"
+        age2 = age2req + "年"
 
     document.getElementById("age2").textContent = age2 
     document.getElementById("age2a").textContent = age2req
@@ -367,11 +367,11 @@ function renderRebirth() {
     const age3req = getVoidRequirement()
     let age3 = ""
     if (age3req == 1000)
-        age3 = "a millennium"
+        age3 = "一千年"
     else if (age3req > 100)
-        age3 = (age3req / 100) + " whole centuries"
+        age3 = (age3req / 100) + "百年"
     else
-        age3 = "1 century"
+        age3 = "一百年"
     document.getElementById("age3").textContent = age3 
 
     var ones = new Array('', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten');
@@ -848,14 +848,14 @@ function createHeaderRow(templates, categoryType, categoryName) {
     const categoryElement = headerRow.getElementsByClassName("category")[0]
 
     if (categoryType == itemCategories) {
-        categoryElement.getElementsByClassName("name")[0].textContent = categoryName
+        categoryElement.getElementsByClassName("name")[0].textContent = keywords[categoryName]
     } else {
-        categoryElement.textContent = categoryName
+        categoryElement.textContent = keywords[categoryName]
     }
 
 
     if (categoryType == jobCategories || categoryType == skillCategories) {
-        headerRow.getElementsByClassName("valueType")[0].textContent = categoryType == jobCategories ? "Income" : "Effect"
+        headerRow.getElementsByClassName("valueType")[0].textContent = keywords[categoryType == jobCategories ? "Income" : "Effect"]
         headerRow.getElementsByClassName("valueType")[0].style.width = categoryType == jobCategories ? "8em" : "18em"
     }
 
@@ -869,7 +869,7 @@ function createHeaderRow(templates, categoryType, categoryName) {
 
 function createRow(templates, name, categoryName, categoryType) {
     const row = templates.row.content.firstElementChild.cloneNode(true)
-    row.getElementsByClassName("name")[0].textContent = name
+    row.getElementsByClassName("name")[0].textContent = keywords[name]
     row.getElementsByClassName("tooltipText")[0].textContent = tooltips[name]
     row.id = "row" + removeSpaces(removeStrangeCharacters(name))
 

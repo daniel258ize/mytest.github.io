@@ -456,15 +456,15 @@ async function downloadFile() {
     return text_data;
 }
 
-document.querySelector("#changelogTabTabButton").addEventListener('click', async function () {
-    try {
-        let text_data = await downloadFile();
-        document.querySelector("#changelog").textContent = text_data;
-    }
-    catch (e) {
-        alert(e.message);
-    }
-});
+// document.querySelector("#changelogTabTabButton").addEventListener('click', async function () {
+//     try {
+//         let text_data = await downloadFile();
+//         document.querySelector("#changelog").textContent = text_data;
+//     }
+//     catch (e) {
+//         alert(e.message);
+//     }
+// });
 
 function togglePause() {
     gameData.paused = !gameData.paused
@@ -694,10 +694,10 @@ function setTheme(index, reload=false) {
     }
 }
 
-function setEnableKeybinds(enableKeybinds) {
-    gameData.settings.enableKeybinds = enableKeybinds
-    selectElementInGroup("EnableKeybinds", enableKeybinds ? 0 : 1)
-}
+// function setEnableKeybinds(enableKeybinds) {
+//     gameData.settings.enableKeybinds = enableKeybinds
+//     selectElementInGroup("EnableKeybinds", enableKeybinds ? 0 : 1)
+// }
 
 function resetEvilPerks(){
     if (gameData.requirements["God's Blessings"].isCompleted())
