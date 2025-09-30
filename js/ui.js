@@ -89,7 +89,7 @@ function renderSideBar() {
     const quickTaskDisplayElement = document.getElementById("quickTaskDisplay")
 
     const progressBar = quickTaskDisplayElement.getElementsByClassName("job")[0]
-    progressBar.querySelector(".name").textContent = (task.isHero ? "Great " : "") + task.name + " lvl " + formatLevel(task.level)
+    progressBar.querySelector(".name").textContent = (task.isHero ? "偉大 " : "") + task.name + " 等級 " + formatLevel(task.level)
     const progressFill = progressBar.getElementsByClassName("progressFill")[0]
     renderProgressBar(task, progressFill, progressBar)   
 
@@ -97,7 +97,7 @@ function renderSideBar() {
     document.getElementById("lifespanDisplay").textContent = formatWhole(daysToYears(getLifespan()))
     document.getElementById("realtimeDisplay").textContent = formatTime(gameData.realtime)
     document.getElementById("boostCooldownDisplay").textContent = getBoostCooldownString()            
-    document.getElementById("pauseButton").textContent = gameData.paused ? "Play" : "Pause"
+    document.getElementById("pauseButton").textContent = gameData.paused ? "繼續" : "暫停"
     document.getElementById("boostPanel").hidden = gameData.rebirthFiveCount == 0
     renderBoostButton("boostButton")
 
@@ -148,7 +148,7 @@ function renderSideBar() {
         rebirth5button.classList.add("color-hypercubes")
     }
     else {
-        rebirth5button.textContent = "Unlock Hypercubes"
+        rebirth5button.textContent = "解鎖超立方"
     }
 
     document.getElementById("rebirthButton5").hidden = getHypercubeCap() == Infinity && gameData.essence < 1e90

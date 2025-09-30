@@ -162,9 +162,9 @@ function formatAge(days) {
     const years = daysToYears(days)
     const day = getCurrentDay(days)
     if (years > 10000)
-        return "Age " + format(years)
+        return "年齡 " + format(years)
     else
-        return "Age " + years + " Day " + day
+        return "年齡 " + years + " 天 " + day
 }
 
 function getBaseLog(x, y) {

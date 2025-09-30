@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +15,14 @@
 	<div class="w3-margin">
 		<div class="header">
 			<img src="img/logos.png" alt="logos" />
-			<h3>Progress Knight Quest</h3>
+			<h3>進度騎士：征途</h3>
 		</div>
 		<div id="offline_progress" hidden="hidden" class="panel w3-margin-left">
 			<h2>
 				<div>
-					<div style="margin-bottom: 0.1em; margin-top: 0.8em; width: 100%; text-align: center;">Offline Progress: <span id="offline_time"></span></div>
+     <div style="margin-bottom: 0.1em; margin-top: 0.8em; width: 100%; text-align: center;">離線進度：<span id="offline_time"></span></div>
 					<div>
-						<button id="skipButton" class="w3-button baritem button" style="margin-bottom: 0.1em; margin-top: 0.8em; width: 100%" onClick="stopOffline()">Skip</button>
+      <button id="skipButton" class="w3-button baritem button" style="margin-bottom: 0.1em; margin-top: 0.8em; width: 100%" onClick="stopOffline()">跳過</button>
 					</div>
 				</div>
 			</h2>
@@ -33,38 +33,38 @@
 				</div>
 				<div class="column" >
 					<div id="tabcolumn" class="panel w3-margin-left tabs-tab-column">
-						<div class="w3-button w3-bar-item tabButton baritem" id="infoTabButton" onClick="setTab('info')">Info</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="jobsTabButton" onClick="setTab('jobs')">Hero</div>
-						<div class="w3-button w3-bar-item tabButton baritem hidden" id="skillsTabButton" onClick="setTab('skills')">Skills</div>
-						<div class="w3-button w3-bar-item tabButton baritem hidden" id="shopTabButton" onClick="setTab('shop')">Shop</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="evilperksTabButton" onClick="setTab('evilperks')">Evil perks</div>					
-						<div class="w3-button w3-bar-item tabButton baritem" id="challengesTabButton" onClick="setTab('challenges')">Challenges</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="milestonesTabButton" onClick="setTab('milestones')">Milestones</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="rebirthTabButton" onClick="setTab('rebirth')">Amulet</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="darkMatterTabButton" onClick="setTab('darkMatter')">Dark Matter</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="metaverseTabButton" onClick="setTab('metaverse')">Metaverse</div>
-						<div class="w3-button w3-bar-item tabButton baritem" id="settingsTabButton" onClick="setTab('settings')">Settings</div>
+      <div class="w3-button w3-bar-item tabButton baritem" id="infoTabButton" onClick="setTab('info')">資訊</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="jobsTabButton" onClick="setTab('jobs')">英雄</div>
+						<div class="w3-button w3-bar-item tabButton baritem hidden" id="skillsTabButton" onClick="setTab('skills')">技能</div>
+						<div class="w3-button w3-bar-item tabButton baritem hidden" id="shopTabButton" onClick="setTab('shop')">商店</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="evilperksTabButton" onClick="setTab('evilperks')">邪惡天賦</div>					
+						<div class="w3-button w3-bar-item tabButton baritem" id="challengesTabButton" onClick="setTab('challenges')">挑戰</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="milestonesTabButton" onClick="setTab('milestones')">里程碑</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="rebirthTabButton" onClick="setTab('rebirth')">護符</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="darkMatterTabButton" onClick="setTab('darkMatter')">暗物質</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="metaverseTabButton" onClick="setTab('metaverse')">元宇宙</div>
+						<div class="w3-button w3-bar-item tabButton baritem" id="settingsTabButton" onClick="setTab('settings')">設定</div>
 					</div>
 					<div id="maincolumn" class="panel w3-margin-left w3-margin-top w3-padding tabs-main-column">
 						<div id="hero">
 							<template class="headerRowTaskTemplate">
 								<tr>
-									<th class="rowtitle category">Job</th>
-									<th class="rowtitle">Level</th>
-									<th class="rowtitle valueType">Value type</th>
-									<th class="rowtitle">XP</th>
-									<th class="rowtitle">XP&nbsp;left</th>
-									<th class="rowtitle maxLevel">Max</th>
+         <th class="rowtitle category">職業</th>
+									<th class="rowtitle">等級</th>
+									<th class="rowtitle valueType">數值類型</th>
+									<th class="rowtitle">經驗</th>
+									<th class="rowtitle">剩餘經驗</th>
+									<th class="rowtitle maxLevel">上限</th>
 								</tr>
 							</template>
 							<template class="rowTaskTemplate">
 								<tr>
 									<td>
-										<div class="progress-bar progressBar tooltip">
-											<div class="progress-fill progressFill"></div>
-											<div class="progress-text name">Task</div>
-											<span class="tooltipText"></span>
-										</div>
+  								<div class="progress-bar progressBar tooltip">
+  									<div class="progress-fill progressFill"></div>
+  									<div class="progress-text name">任務</div>
+  									<span class="tooltipText"></span>
+  								</div>
 									</td>
 									<td class="level">Level</td>
 									<td class="value">
@@ -76,22 +76,22 @@
 											<span></span>
 										</div>
 									</td>
-									<td class="xpGain">Xp</td>
-									<td class="xpLeft">Xp left</td>
-									<td class="maxLevel">Max</td>
+									<td class="xpGain">經驗</td>
+									<td class="xpLeft">剩餘經驗</td>
+									<td class="maxLevel">上限</td>
 								</tr>
 							</template>
 							<template class="headerRowItemTemplate">
 								<tr class="item-header-row" onclick="forceAutobuy()">
 									<th class="category">
 										<button class="button-no-button tooltip" style="background-color:transparent;" onclick="forceAutobuy()">
-											<span class="name">Item</span>
-											<span class="tooltipText">Click to activate auto-buy</span>
+           <span class="name">物品</span>
+														<span class="tooltipText">點擊以啟用自動購買</span>
 										</button>
 									</th>
-									<th>On</th>
-									<th>Effect</th>
-									<th>Expense</th>
+									<th>啟用</th>
+									<th>效果</th>
+									<th>花費</th>
 								</tr>
 							</template>
 							<template class="rowItemTemplate">
@@ -99,7 +99,7 @@
 									<td>
 										<button class="button item-button tooltip">
 											<span class="name"></span>
-											<span class="tooltipText">tooltip</span>
+           <span class="tooltipText">提示</span>
 										</button>
 									</td>
 									<td>
@@ -118,9 +118,9 @@
 							</template>
 							<template class="headerRowMilestoneTemplate">
 								<tr>
-									<th>Goal</th>
-									<th class="category">Milestone Tier</th>
-									<th>Effect</th>
+									<th>目標</th>
+									<th class="category">里程碑等級</th>
+									<th>效果</th>
 								</tr>
 							</template>
 							<template class="rowMilestoneTemplate">
@@ -138,7 +138,7 @@
 							</template>
 							<template class="requiredRowTemplate">
 								<td style="padding-left: 0.8em;padding-top: 0.2rem;" colspan=5>
-									<span class="w3-text-gray">Required:</span>
+         <span class="w3-text-gray">需求：</span>
 									<div class="value" colspan=5 style="display:inline">
 										<span class="levels color-income"></span>
 										<div class="coins" style="display:inline">
@@ -153,7 +153,7 @@
 										<span class="hypercube color-hypercubes"></span>
 									</div>
 									<div class="effect">
-										<span class="w3-text-gray">Next effect:</span> <span class="effectValue"></span>
+          <span class="w3-text-gray">下一個效果：</span> <span class="effectValue"></span>
 									</div>
 								</td>
 							</template>
@@ -162,33 +162,33 @@
 							<div class="tab" id="jobs">
 								<div id="infoPage" class="page" style="flex: 1; margin-left: 0.5em;">
 									<div id="challengeTitle" class="challenge-title" hidden="hidden">
-										In challenge: <span id="challengeName"></span>
+										挑戰中：<span id="challengeName"></span>
 										<div style="padding-top:0.3em">
-											<div class="sidebarChallengeReward an_unhappy_life hidden"><span class="color-happiness">Happiness</span> x<span id="sidebarCurrentChallengeBuff1"></span> / x<span id="sidebarChallengeBuff1"></span></div>
-											<div class="sidebarChallengeReward rich_and_the_poor hidden"><span class="color-income">Income</span> x<span id="sidebarCurrentChallengeBuff2"></span> / x<span id="sidebarChallengeBuff2"></span></div>
-											<div class="sidebarChallengeReward time_does_not_fly hidden"><span class="color-time-warping">Time Warping</span> x<span id="sidebarCurrentChallengeBuff3"></span> / x<span id="sidebarChallengeBuff3"></span></div>
-											<div class="sidebarChallengeReward dance_with_the_devil hidden"><span class="color-essence">Essence</span> x<span id="sidebarCurrentChallengeBuff4"></span> / x<span id="sidebarChallengeBuff4"></span></div>
-											<div class="sidebarChallengeReward legends_never_die hidden"><span class="color-evil">Evil</span> x<span id="sidebarCurrentChallengeBuff5"></span> / x<span id="sidebarChallengeBuff5"></span></div>
-											<div class="sidebarChallengeReward the_darkest_time hidden"><span class="color-dark-matter">Dark Matter</span> x<span id="sidebarCurrentChallengeBuff6"></span> / x<span id="sidebarChallengeBuff6"></span></div>
+											<div class="sidebarChallengeReward an_unhappy_life hidden"><span class="color-happiness">快樂</span> x<span id="sidebarCurrentChallengeBuff1"></span> / x<span id="sidebarChallengeBuff1"></span></div>
+											<div class="sidebarChallengeReward rich_and_the_poor hidden"><span class="color-income">收入</span> x<span id="sidebarCurrentChallengeBuff2"></span> / x<span id="sidebarChallengeBuff2"></span></div>
+											<div class="sidebarChallengeReward time_does_not_fly hidden"><span class="color-time-warping">時間扭曲</span> x<span id="sidebarCurrentChallengeBuff3"></span> / x<span id="sidebarChallengeBuff3"></span></div>
+											<div class="sidebarChallengeReward dance_with_the_devil hidden"><span class="color-essence">精華</span> x<span id="sidebarCurrentChallengeBuff4"></span> / x<span id="sidebarChallengeBuff4"></span></div>
+											<div class="sidebarChallengeReward legends_never_die hidden"><span class="color-evil">邪惡</span> x<span id="sidebarCurrentChallengeBuff5"></span> / x<span id="sidebarChallengeBuff5"></span></div>
+											<div class="sidebarChallengeReward the_darkest_time hidden"><span class="color-dark-matter">暗物質</span> x<span id="sidebarCurrentChallengeBuff6"></span> / x<span id="sidebarChallengeBuff6"></span></div>
 										</div>
 									</div>
 									<div class="text-caption" id="errorInfo" hidden="hidden">
-										<div>⚠️ Oh no! It looks like something on the site broke.. If this issue persists, feel free to contact the developers.</div>
+          <div>⚠️ 糟了！看起來網站出了點問題。若問題持續，請聯絡開發者。</div>
 										<br>
 									</div>
 									<div id="deathText" class="hidden">
-										<div class="text-caption" style="color: red">Age has caught up to you</div>
-										<div class="sidebar-element" style="color: gray">Your age has met your lifespan; use the amulet to rebirth before you pass away</div>
+          <div class="text-caption" style="color: red">年齡追上了你</div>
+										<div class="sidebar-element" style="color: gray">你的年齡已達壽命上限；請在逝去前使用護符轉生</div>
 									</div>
-									<div class="text-caption"><span id="ageDisplay">Age 14 Day 0</span></div>
-									<div class="sidebar-element" style="color: gray">
-										Lifespan: <span id="lifespanDisplay">70</span> years
-										<br>Real Time: <span id="realtimeDisplay">00:00:00</span>
-										<div id="fps"></div>
-									</div>
-									<button id="pauseButton" class="w3-button button" onClick="togglePause()">Pause</button>
+         <div class="text-caption"><span id="ageDisplay">年齡 14 天 0</span></div>
+										<div class="sidebar-element" style="color: gray">
+											壽命：<span id="lifespanDisplay">70</span> 年
+											<br>實際時間：<span id="realtimeDisplay">00:00:00</span>
+											<div id="fps"></div>
+										</div>
+										<button id="pauseButton" class="w3-button button" onClick="togglePause()">暫停</button>
 									<div id="boostPanel" class="sidebar-element" style="color: gray">
-										<button id="boostButton" class="perk metaperk perk-boost" onClick="applyBoost()">Boost</button>
+          <button id="boostButton" class="perk metaperk perk-boost" onClick="applyBoost()">爆發</button>
 										<span style="padding-left:0.4em" id="boostCooldownDisplay">00:00</span>
 									</div>
 									<div class="text-caption" id="coinDisplay">
@@ -827,9 +827,9 @@
 						</div>
 						<div class="tab column" style="display:none" id="settings">
 							<div id="tabcolumnSettings" class="panel w3-padding page-column">
-								<div class="w3-button w3-bar-item tabButtonSettings baritem w3-blue-gray" id="settingsTabTabButton" onClick="setTabSettings('settingsTab')">Settings</div>
-								<div class="w3-button w3-bar-item tabButtonSettings baritem" id="statsTabTabButton" onClick="setTabSettings('statsTab')">Stats</div>
-								<div class="w3-button w3-bar-item tabButtonSettings baritem" id="changelogTabTabButton" onClick="setTabSettings('changelogTab')">Changelog</div>
+        <div class="w3-button w3-bar-item tabButtonSettings baritem w3-blue-gray" id="settingsTabTabButton" onClick="setTabSettings('settingsTab')">設定</div>
+									<div class="w3-button w3-bar-item tabButtonSettings baritem" id="statsTabTabButton" onClick="setTabSettings('statsTab')">統計</div>
+									<div class="w3-button w3-bar-item tabButtonSettings baritem" id="changelogTabTabButton" onClick="setTabSettings('changelogTab')">更新日誌</div>
 							</div>
 							<div id="maincolumnSettings" class="panel w3-margin-left w3-margin-top">
 								<div id="settingsTab" class="tabSettings">
