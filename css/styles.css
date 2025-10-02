@@ -550,3 +550,60 @@ button:focus {
 .page {
     max-width: 800px;
 }
+
+.progressBar {
+    height: 20px; /* Adjust as needed */
+    background: linear-gradient(90deg, #0a0a0a, #1a1a2e);
+    border: 1px solid #00ffff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 5px rgba(0, 255, 255, 0.2), 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #0080ff);
+    border-radius: 8px;
+    transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth, performant easing */
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.progressFill::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    animation: shine 1.5s infinite linear;
+}
+
+@keyframes shine {
+    to { transform: translateX(100%); }
+}
+
+/* Hero variant for glow boost */
+.progress-fill-hero,
+.progress-bar-hero {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+.progressFill.progress-fill-hero {
+    background: linear-gradient(90deg, #ff00ff, #ff0080);
+}
+.animation-container {
+    display: none;
+    width: 8px; height: 8px; /* Frame size */
+    background: url('https://opengameart.org/sites/default/files/explosion-sheet.png') 0 0 no-repeat;
+    background-size: 64px 8px; /* Full sheet width x height */
+    margin: 2px auto; /* Center under bar */
+    animation: spriteAnim 0.8s steps(8) forwards;
+    animation-play-state: paused; /* JS controls start */
+}
+
+@keyframes spriteAnim {
+    from { background-position: 0 0; }
+    to { background-position: -64px 0; } /* Slide left through frames */
+}

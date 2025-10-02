@@ -210,6 +210,21 @@ function renderProgressBar(task, progressFill, progressBar){
     else
         progressFill.style.width = task.xp / task.getMaxXp() * 100 + "%"
 
+    let animContainer = progressBar.querySelector('.animation-container');
+    if (!animContainer) {
+        animContainer = document.createElement('div');
+        animContainer.className = 'animation-container';
+        progressBar.appendChild(animContainer);
+    }
+
+    if (task.isFinished && width >= 100) {
+        animContainer.style.display = 'block';
+        animContainer.style.animationPlayState = 'running'; // Restart if needed
+        // Optional: Hide after animation (add setTimeout in render loop if desired)
+    } else {
+        animContainer.style.display = 'none';
+    }
+
     if (task.isHero) {
         progressFill.classList.add("progress-fill-hero")
         progressBar.classList.add("progress-bar-hero")
