@@ -195,8 +195,8 @@ function renderSideBar() {
 }
 
 function renderProgressBar(task, progressFill, progressBar){
+    let width = 0
     if (task.isFinished) {
-        let width = 0
         if (task.level > 10000) {
             width = task.level % 100
         }

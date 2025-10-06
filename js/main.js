@@ -1346,10 +1346,16 @@ function update(needUpdateUI = true) {
     autoBuy()
     applyExpenses()
     for (const key in gameData.taskData) {
-        const task = gameData.taskData[key]
+        // const task = gameData.taskData[key]
+        const task = gameData.currentJob;
+
         if ((task instanceof Skill || task instanceof Job) && gameData.requirements[key].isCompleted()) {
             task.increaseXp()
         }
+        // const myElement = document.querySelector("#row"+removeSpaces(removeStrangeCharacters(key))+" td:first-child div.current");
+        // if (myElement && (task instanceof Skill || task instanceof Job) && gameData.requirements[key].isCompleted()) {
+        //     task.increaseXp()
+        // }
     }
     increaseCoins()
 

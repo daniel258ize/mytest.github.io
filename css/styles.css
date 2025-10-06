@@ -93,10 +93,10 @@ td {
 
 .progress-text {
     position: absolute;
-    top: 5%;
-    left: 0.5em;
+    top: 13%;
+    left: 0.7em;
     bottom: 0%;
-    color: white
+    color: white;
 }
 
 .progress-bar {
@@ -108,7 +108,7 @@ td {
 
 .progress-fill {
     height: 1.6em;
-    background-color: rgb(46, 148, 231);
+    background-color: rgb(30, 91, 139);
 }
 
 .progress-bar-hero {
@@ -563,11 +563,12 @@ button:focus {
 
 .progressFill {
     height: 100%;
-    background: linear-gradient(90deg, #00ffff, #0080ff);
+    background: linear-gradient(90deg, #006262, #0080ff);
     border-radius: 8px;
-    transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth, performant easing */
+    transition: width 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth, performant easing */
     position: relative;
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+    overflow: hidden;
 }
 
 .progressFill::after {
